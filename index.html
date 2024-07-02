@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniti Island</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Taniti Island</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Travel Info</a>
+                    <div class="dropdown-content">
+                        <a href="/submenu/getting-here.html">Getting Here</a>
+                        <a href="/submenu/getting-around.html">Getting Around</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Stay</a>
+                    <div class="dropdown-content">
+                        <a href="/submenu/lodging.html">Lodging</a>
+                        <a href="/submenu/food.html">Food</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Experiences</a>
+                    <div class="dropdown-content">
+                        <a href="/submenu/sightseeing.html">Sightseeing</a>
+                        <a href="/submenu/entertainment.html">Entertainment</a>
+                    </div>
+                </li>
+                <li><a href="/FAQs.html">FAQs</a></li>
+                <li><a href="/contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="picture-slider">
+            <button type="button" class="arrow left-arrow" onclick="plusSlides(-1)">&lt;</button>
+            <div class="picture-container">
+                <div class="picture">
+                    An Experience Picture-1
+                    <button type="button" class="picture-button">Button</button>
+                </div>
+                <div class="picture">
+                    An Experience Picture-2
+                    <button type="button" class="picture-button">Button</button>
+                </div>
+                <div class="picture">
+                    An Experience Picture-3
+                    <button type="button" class="picture-button">Button</button>
+                </div>
+                <div class="picture">
+                    An Experience Picture-4
+                    <button type="button" class="picture-button">Button</button>
+                </div>
+                <div class="picture">
+                    An Experience Picture-5
+                    <button type="button" class="picture-button">Button</button>
+                </div>
+                <div class="picture">
+                    An Experience Picture-6
+                    <button type="button" class="picture-button">Button</button>
+                </div>
+                <div class="picture">
+                    An Experience Picture-7
+                    <button type="button" class="picture-button">Button</button>
+                </div>
+            </div>
+            <button type="button" class="arrow right-arrow" onclick="plusSlides(1)">&gt;</button>
+        </section>
+        <section class="welcome-section">
+            <h1>Welcome to Taniti</h1>
+            <p>Taniti is a small, tropical island in the Pacific. While the island has an area of less than 500 square miles, the terrain is varied and includes both sandy and rocky beaches, a small but safe harbor, lush tropical rainforests, and a mountainous interior that includes a small, active volcano. Taniti has an indigenous population of about 20,000. Until a recent increase in tourism, most of the Tanitian economy was dominated by fishing or agriculture.</p>
+        </section>
+        <section class="info-sections">
+            <div class="calendar-view">
+                <h2>Events & Holiday's</h2>
+                <div class="calendar-widget">
+                    <div class="calendar">
+                        <div class="month">
+                            <h3>June 20XX</h3>
+                        </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days">
+                            <div class="day"></div>
+                            <div class="day">1</div>
+                            <div class="day">2</div>
+                            <div class="day">3</div>
+                            <div class="day">4</div>
+                            <div class="day">5</div>
+                            <div class="day">6</div>
+                            <div class="day">7</div>
+                            <div class="day">8</div>
+                            <div class="day">9</div>
+                            <div class="day">10</div>
+                            <div class="day">11</div>
+                            <div class="day">12</div>
+                            <div class="day">13</div>
+                            <div class="day">14</div>
+                            <div class="day">16</div>
+                            <div class="day">17</div>
+                            <div class="day">18</div>
+                            <div class="day">19</div>
+                            <div class="day">20</div>
+                            <div class="day">21</div>
+                            <div class="day">22</div>
+                            <div class="day">23</div>
+                            <div class="day">24</div>
+                            <div class="day">25</div>
+                            <div class="day">26</div>
+                            <div class="day">27</div>
+                            <div class="day">28</div>
+                            <div class="day">29</div>
+                            <div class="day">30</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-section">
+                <h2>Join Our Newsletter</h2>
+                <div id="signup-container">
+                    <p>Subscribe to our newsletter and receive a weekly email packed with exclusive news and promotions.</p>
+                    <form id="newsletter-form">
+                        <div class="input-container">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="cta-button">Sign-up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="featured-experiences">
+                <h2>Featured Experiences</h2>
+                <ul>
+                    <li>Lorem icing elit.</li>
+                    <li>Quisque congud lobortis ante laoreet.</li>
+                    <li>Fusce id magutpat ac eget libero.</li>
+                    <li>Nunc sagi pharetra.</li>
+                    <li>Aenean egefficitur ac eget turpis.</li>
+                    <li>Integenatis venenatis.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="legal-info">
+            <p>&copy; 2024 Taniti Island. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+        <div class="social-links">
+            <img src="img/facebook.png" class="social-button" alt="Facebook">
+            <img src="img/instagram.png" class="social-button" alt="Instagram">
+            <img src="img/youtube.png" class="social-button" alt="YouTube">
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+

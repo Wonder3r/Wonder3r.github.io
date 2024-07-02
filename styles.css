@@ -1,0 +1,741 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F6FFF8;
+    color: black;
+}
+
+/*Header Content*/
+header {
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    top: 0;
+    background-color: #6B9080;
+    color: #F6FFF8;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    align-content: center;
+    margin: 0.5%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn {
+    background-color: #F6FFF8;
+    color: black;
+}
+
+nav ul li.dropdown {
+    display: inline-block;
+}
+
+nav ul .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F6FFF8;
+    min-width: 160px;
+    z-index: 1;
+}
+
+nav ul .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav ul .dropdown-content a:hover {
+    background-color: #A4C3B2;
+}
+
+nav ul .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    flex: 1;
+}
+
+/*The main content of Home Page*/
+
+.picture-slider {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.picture-container {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.picture {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: rgba(190, 190, 190, 0.582);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 200px;
+    font-size: 1.5em;
+}
+
+.picture-button {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F6FFF8;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: pointer;
+    opacity: 1;
+}
+
+.picture-button:hover {
+    background-color: #A4C3B2;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.377);
+    color: #F6FFF8;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-section h1 {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.welcome-section p {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 1.5em;
+}
+
+.info-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.info-sections > .calendar-view, .cta-section, .featured-experiences {
+    border-radius: 8px;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #A4C3B2;
+}
+
+.calendar-view h2, .cta-section h2, .featured-experiences h2 {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.calendar-widget {
+    overflow-x: auto;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    background-color: #A4C3B2;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.calendar .month {
+    grid-column: span 7;
+    text-align: center;
+}
+
+.calendar .weekdays, .calendar .days {
+    display: contents;
+}
+
+.calendar .weekdays div, .calendar .days .day {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #6B9080;
+    background-color: #F6FFF8;
+    box-sizing: border-box;
+}
+
+#signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#signup-container p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+#newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #A4C3B2;
+    border-radius: 4px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.input-container input[type="email"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #F6FFF8;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    flex: 1; 
+    background-color: #F6FFF8;
+}
+
+.input-container button {
+    background-color: #F6FFF8;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-container button:hover {
+    background-color: #6B9080;
+    color: #F6FFF8;
+}
+
+.featured-experiences ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.featured-experiences ul li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #A4C3B2;
+    border-radius: 4px;
+}
+
+
+
+/*Footer for all pages*/
+
+footer {
+    background-color: #6B9080;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.legal-info {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+
+.legal-info p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.legal-info a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.legal-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    flex: 1;
+    text-align: right;
+    padding: 10px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+
+/*Contact US Page */
+
+#contact-us-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 2fr));
+    gap: 20px; 
+    max-width: 100%; 
+    padding: 20px;
+}
+
+#contact-table-section, #form-section {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #A4C3B2;
+    text-align: center;
+}
+
+#table-h1, #contact-form-h1 {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#contact-table {
+    width: 100%;
+    max-width: 50%; 
+    margin: 0 auto; 
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px #6B9080;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+#contact-table th, #contact-table td {
+    padding: 12px 15px;
+    border-bottom: .5px solid #A4C3B2;
+}
+
+#contact-table thead {
+    border: 1px solid #A4C3B2;
+}
+
+#contact-us-form {
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #6B9080;
+}
+
+.form-row {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#contact-us-form label {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #A4C3B2;
+    background-color: #F6FFF8;
+    border-radius: 4px;
+    width: calc(100% - 140px);
+    font-size: 18px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#form-button {
+    background-color: #6B9080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#form-button:hover {
+    background-color: #111;
+}
+
+
+
+/* FAQs Page */
+
+.FAQ-h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#FAQs-section {
+    padding: 20px;
+    text-align: center;
+}
+
+#FAQ-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.faq-item {
+    padding: 20px;
+    border: 1px solid #A4C3B2;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.faq-item h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.faq-item p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+
+
+/* Sub menu page for Experiences - Entertainment */
+
+#activities-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#activities-h1 {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 20px;
+}
+
+#articles-container article {
+    padding: 15px;
+    border: 1px solid #A4C3B2;
+    border-radius: 5px;
+}
+
+#articles-container h3{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+#articles-container p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+
+
+/* Sub menu page for Experiences - Sightseeing */
+
+#sightseeing-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#sightseeing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 20px;
+}
+
+#sightseeing-section article {
+    padding: 15px;
+    border: 1px solid #A4C3B2;
+    border-radius: 5px;
+}
+
+#sightseeing-section h1 {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#sightseeing-section h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+#sightseeing-section p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+
+
+/* Sub menu page for Stay - Food*/
+
+#main-container-food {
+    text-align: center;
+    padding: 20px;
+}
+
+#food-section-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 20px;
+}
+
+#main-container-food article {
+    padding: 15px;
+    border: 1px solid #A4C3B2;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#main-container-food h1 {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#main-container-food h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+#main-container-food p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+
+
+/* Sub menu page for Stay - Lodging*/
+
+#lodging-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#lodging-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 20px;
+}
+
+#lodging-container article {
+    padding: 15px;
+    border: 1px solid #A4C3B2;
+    border-radius: 5px;
+}
+
+#lodging-section h1 {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#lodging-container h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+#lodging-container p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+#lodging-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lodging-container ul li {
+    padding: 8px 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#lodging-container ul li:hover {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+
+
+/* Sub menu page for Travel Info - Getting Here  */
+
+#travel-options-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#travel-options-container h1 {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#travel-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 20px;
+}
+
+#travel-section article {
+    padding: 15px;
+    border: 1px solid #A4C3B2;
+    border-radius: 5px;
+}
+
+#travel-section h2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+#travel-section p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+
+
+/* Sub menu page for Travel Info - Getting Around  */
+
+#transportation-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#transportation-container h1 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+#transportation-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#transportation-section article {
+    padding: 15px;
+    border: 1px solid #A4C3B2;
+    border-radius: 5px;
+}
+
+#transportation-section h2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+#transportation-section p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    text-align: left;
+}
