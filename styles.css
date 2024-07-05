@@ -90,67 +90,73 @@ main {
 
 .picture-slider {
     position: relative;
-    align-items: center;
-    justify-content: center;
-    max-width: 80%;
-    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     overflow: hidden;
-    white-space: nowrap;
+    padding: 10px 0px;
 }
 
 .picture-container {
     display: flex;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .picture {
     min-width: 100%;
     box-sizing: border-box;
-    background: rgba(190, 190, 190, 0.582);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    line-height: 200px;
-    font-size: 1.5em;
+    position: relative;
 }
 
-.picture-button {
-    position: absolute;
-    bottom: 10px; 
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #F6FFF8;
-    border: none;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    opacity: pointer;
-    opacity: 1;
-}
-
-.picture-button:hover {
-    background-color: #A4C3B2;
+.size-picture {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
 }
 
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.377);
-    color: #F6FFF8;
-    border: none;
-    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white;
+    border: 2px solid white; 
+    padding: 15px;
+    font-size: 25px; 
     cursor: pointer;
+    z-index: 1;
+    border-radius: 50%; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.815); 
+    color: black; 
+    transform: translateY(-50%) scale(1.1); 
 }
 
 .left-arrow {
-    left: 0;
+    left: 10px; 
 }
 
 .right-arrow {
-    right: 0;
+    right: 10px;
 }
+
+.picture-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid white; 
+}
+
 
 .welcome-section {
     text-align: center;
